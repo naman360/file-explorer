@@ -1,8 +1,8 @@
 export type FileSystemItem = {
-  id: string;
+  id: string | number;
   name: string;
   isFolder: boolean;
-  items?: FileSystemItem[];
+  items: FileSystemItem[];
 };
 export const data: FileSystemItem = {
   id: "1",
@@ -15,9 +15,10 @@ export const data: FileSystemItem = {
       isFolder: true,
       items: [
         {
-          id: "2",
+          id: "3",
           name: "data.js",
           isFolder: false,
+          items: [],
         },
         {
           id: "4",
@@ -28,6 +29,7 @@ export const data: FileSystemItem = {
               id: "6",
               name: "react.svg",
               isFolder: false,
+              items: [],
             },
           ],
         },
@@ -37,6 +39,7 @@ export const data: FileSystemItem = {
       id: "5",
       name: "index.html",
       isFolder: false,
+      items: [],
     },
   ],
 };
